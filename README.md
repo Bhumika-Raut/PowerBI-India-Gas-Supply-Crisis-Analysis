@@ -1,9 +1,10 @@
 # 🇮🇳 India Gas Supply Crisis Analysis (2019–2026)
 ### Microsoft Power BI Dashboard Project
 
-<img src="India Energy Overview.png" width="1000">
-<img src="LNG Import Dependency.png" width="1000">
-<img src="Impact on India" width="1000">
+<img src="India Energy Overview.png" width="800">
+<img src="LNG Import Dependency.png" width="800">
+<img src="Impact on India.png" width="800">
+
 
 ---
 
