@@ -1,9 +1,9 @@
 # 🇮🇳 India Gas Supply Crisis Analysis (2019–2026)
 ### Microsoft Power BI Dashboard Project
 
-<img src="India Energy Overview.png" width="800">
-<img src="LNG Import Dependency.png" width="800">
-<img src="Impact on India.png" width="800">
+<img src="images/India Energy Overview.png" width="600" height="420">
+<img src="images/LNG Import Dependency.png" width="600" height="420">
+<img src="images/Impact on India.png" width="600" height="420">
 
 
 ---
@@ -125,4 +125,120 @@ Shows **how the gas crisis affects Indian states and economic sectors**.
 
 ---
 
-# 📁 Repository Structure
+---
+
+# 📂 Datasets
+
+### Dataset 1 — LNG Imports
+
+Columns:
+
+- Year (2019–2026)
+- Import Country
+- LNG Imports (Million MT)
+- Gas Price (USD/MMBtu)
+- Supply Disruption Level
+- Crisis Status
+
+**Rows:** 343
+
+---
+
+### Dataset 2 — Gas Consumption in India
+
+Columns:
+
+- Year
+- State
+- Sector
+- Gas Demand (BCM)
+- Domestic Production (BCM)
+- Storage Level %
+- Supply Risk Level
+
+**Rows:** 2050
+
+---
+
+# 🛠️ Technologies Used
+
+- **Microsoft Power BI Desktop** — Dashboard creation
+- **Power Query** — Data cleaning
+- **DAX** — Calculations and measures
+- **CSV Files** — Data source
+
+---
+
+# 🧮 DAX Measures
+Total LNG Imports =
+SUM(LNG_Imports_India_2019_2026[LNG_Imports_Million_MT])
+
+Avg Gas Price =
+AVERAGE(LNG_Imports_India_2019_2026[Gas_Price_USD_per_MMBtu])
+
+Is Crisis Year =
+IF(MAX(LNG_Imports_India_2019_2026[Year]) = 2026, "CRISIS", "Normal")
+
+Total Gas Demand =
+SUM(India_Gas_Consumption_2019_2026[Gas_Demand_BCM])
+
+Total Domestic Production =
+SUM(India_Gas_Consumption_2019_2026[Domestic_Production_BCM])
+
+Supply Gap BCM = [Total Gas Demand] - [Total Domestic Production]
+
+
+---
+
+# 🚀 How to Use
+
+1️⃣ Download the repository.
+
+2️⃣ Open the project in **Microsoft Power BI Desktop**.
+
+3️⃣ Open the file:
+
+
+4️⃣ Explore the dashboard using slicers.
+
+---
+
+## ⚠️ Important Navigation Tip
+
+When opening the dashboard **in edit mode**, navigation buttons work differently.
+
+👉 You must press:
+
+**CTRL + Click**
+
+to move between pages.
+
+---
+
+# 📈 Key Insights
+
+- 🔴 **2026 Crisis Impact:** Gas prices increased more than 2× compared to 2025  
+- 📉 **Import Drop:** Gulf LNG supply dropped significantly  
+- 🇺🇸 **USA Imports Increased:** Alternative supply source  
+- ⚡ **Most Affected Sectors:** Power and Fertilizer  
+- 🗺️ **High Risk States:** Delhi, Punjab, Uttar Pradesh  
+- 📊 **Supply Gap:** Domestic production covered less than 30% of demand
+
+---
+
+# 🎓 Project Context
+
+Developed as part of the **Microsoft Elevate AICTE Internship Program (2026)**.
+
+Domain: **Energy Analytics**  
+Tool: **Microsoft Power BI Desktop**
+
+---
+
+# 👩‍💻 Author
+
+**Bhumika Raut**
+
+---
+
+Built with ❤️ using Microsoft Power BI
