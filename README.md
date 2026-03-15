@@ -1,131 +1,127 @@
-🇮🇳 India Gas Supply Crisis Analysis (2019–2026)
-A Microsoft Power BI Dashboard Project
+# 🇮🇳 India Gas Supply Crisis Analysis (2019–2026)
+### Microsoft Power BI Dashboard Project
 
+<img src="India Energy Overview.png" width="1000">
+<img src="LNG Import Dependency.png" width="1000">
+<img src="Impact on India" width="1000">
 
-📌 Project Overview
-This project is an interactive Power BI dashboard that analyzes India's natural gas supply crisis from 2019 to 2026. The dashboard focuses on the impact of the 2026 global LNG supply disruption caused by geopolitical conflicts affecting key gas export routes — and how it impacted India's energy security, import dependency, state-wise demand, and sector-level consumption.
+---
 
-🚨 Problem Statement
-India's growing energy demand heavily relies on Liquefied Natural Gas (LNG) imports from countries like Qatar, USA, Australia, Russia, UAE, Nigeria, and Oman. In 2026, a major geopolitical crisis disrupted global LNG supply routes, causing:
+## 📌 Project Overview
 
-📈 Gas prices to spike dramatically
-📉 LNG import volumes to drop sharply
-⚡ Power, fertilizer, and industrial sectors to face severe shortages
-🗺️ Multiple Indian states to reach critical supply risk levels
+This project is an **interactive Power BI dashboard** analyzing India's natural gas supply situation from **2019 to 2026**.
 
-This dashboard visualizes these trends and helps analysts understand India's energy vulnerability.
+The dashboard focuses on the **2026 LNG supply crisis** caused by global geopolitical conflicts that disrupted international gas supply routes.
 
-📊 Dashboard Pages
-Page 1 — India Energy Overview
+The dashboard helps visualize:
 
-National-level summary of India's gas situation (2019–2026)
+- LNG import dependency
+- Gas price fluctuations
+- State-wise demand and supply risk
+- Sector-level gas consumption
+- India's energy vulnerability during a global crisis
 
-VisualDescription4 KPI CardsTotal LNG Imports, Avg Gas Price, Domestic Production, Crisis StatusLine ChartGas Price Trend — showing 2026 spikeArea ChartLNG Imports Over Time — showing 2026 dropBar ChartGas Demand vs Domestic Production comparisonSlicersYear, Import Country
+---
 
-Page 2 — LNG Import Dependency
+## 🚨 Problem Statement
 
-Analysis of which countries India depends on for LNG
+India heavily depends on **Liquefied Natural Gas (LNG) imports** from countries such as:
 
-VisualDescriptionWorld MapLNG supplier countries with bubble sizes by import volumeBar ChartLNG Imports by Country with disruption level colorsDonut ChartImport share percentage by countryTableTop 3 countries — Import volume, Gas price, Disruption levelSlicerYear
+- Qatar  
+- USA  
+- Australia  
+- Russia  
+- UAE  
+- Nigeria  
+- Oman  
 
-Page 3 — Impact on India
+In **2026**, geopolitical tensions disrupted global LNG supply routes which caused:
 
-How the crisis affects Indian states and economic sectors
+- 📈 **Gas prices to increase sharply**
+- 📉 **LNG imports to decline**
+- ⚡ **Power and fertilizer sectors to face shortages**
+- 🗺️ **Multiple Indian states to experience supply risk**
 
-VisualDescriptionIndia MapGas demand highlighted by stateColumn ChartGas consumption by sector (Power, Fertilizer, Industry, Transport, City Gas)Line ChartDemand vs Domestic Production — widening gap in 2026GaugeSupply Gap BCM — risk indicatorSlicersYear, State, Sector
+This dashboard analyzes and visualizes the **impact of this crisis on India’s energy system**.
 
-📁 Repository Structure
-India-Gas-Supply-Crisis-Analysis-PowerBI/
-│
-├── 📊 India_Gas_Supply.pbix              # Main Power BI Dashboard File
-│
-├── 📄 Data/
-│   ├── LNG_Imports_India_2019_2026.csv   # Dataset 1 — LNG Import data (343 rows)
-│   └── India_Gas_Consumption_2019_2026.csv # Dataset 2 — Gas Consumption data (2050 rows)
-│
-├── 🖼️ Screenshots/
-│   ├── Page1_India_Energy_Overview.png
-│   ├── Page2_LNG_Import_Dependency.png
-│   └── Page3_Impact_on_India.png
-│
-└── 📖 README.md
+---
 
-📂 Datasets
-Dataset 1 — LNG Imports Affecting India
-ColumnDescriptionYear2019–2026Import_CountryQatar, USA, Australia, Russia, UAE, Nigeria, OmanLNG_Imports_Million_MTImport volume in Million Metric TonnesGas_Price_USD_per_MMBtuGas price in USD per MMBtuSupply_Disruption_LevelLow / Medium / HighCrisis_StatusNormal / Watch / Elevated / CRISIS
-Rows: 343 | Period: 2019–2026
+# 📊 Dashboard Pages
 
-Dataset 2 — India Gas Consumption Impact
-ColumnDescriptionYear2019–2026State10 Indian states including Gujarat, Maharashtra, Delhi, etc.SectorPower, Fertilizer, Industry, Transport, City GasGas_Demand_BCMGas demand in Billion Cubic MetresDomestic_Production_BCMDomestic production in BCMStorage_Level_PercentageStorage level %Supply_Risk_LevelLow / Medium / High / Critical
-Rows: 2,050 | Period: 2019–2026
+## Page 1 — India Energy Overview
 
-🛠️ Technology Used
-TechnologyPurposeMicrosoft Power BI DesktopDashboard creation and visualizationDAX (Data Analysis Expressions)Custom measures and calculationsPower QueryData transformation and cleaningCSV FilesData source
+A national-level summary of India's gas situation.
 
-🧮 DAX Measures Created
-daxTotal LNG Imports = SUM(LNG_Imports_India_2019_2026[LNG_Imports_Million_MT])
+**Visuals Included**
 
-Avg Gas Price = AVERAGE(LNG_Imports_India_2019_2026[Gas_Price_USD_per_MMBtu])
+- KPI Cards  
+  - Total LNG Imports  
+  - Average Gas Price  
+  - Domestic Production  
+  - Crisis Status  
 
-Is Crisis Year = IF(MAX(LNG_Imports_India_2019_2026[Year]) = 2026, "CRISIS", "Normal")
+- Line Chart  
+  **Gas Price Trend (2019–2026)**
 
-Total Gas Demand = SUM(India_Gas_Consumption_2019_2026[Gas_Demand_BCM])
+- Area Chart  
+  **LNG Imports Over Time**
 
-Total Domestic Production = SUM(India_Gas_Consumption_2019_2026[Domestic_Production_BCM])
+- Bar Chart  
+  **Gas Demand vs Domestic Production**
 
-Supply Gap BCM = [Total Gas Demand] - [Total Domestic Production]
+- Slicers  
+  - Year  
+  - Import Country
 
-🎨 Dashboard Theme
-ElementColor CodePage Background#0D1B2A (Deep Navy)Card Background#0D1B2ABorders & Accents#00C8FF (Cyan Glow)Title Banner#1B3A6B (Dark Blue)Crisis Alert#FF0000 (Red)Chart Lines#00C8FF (Cyan)
+---
 
-🚀 How to Use
+## Page 2 — LNG Import Dependency
 
-Clone the repository:
+This page analyzes **which countries India depends on for LNG supply**.
 
-bashgit clone https://github.com/YOUR_USERNAME/India-Gas-Supply-Crisis-Analysis-PowerBI.git
+**Visuals Included**
 
-Open Power BI Desktop
+- 🌍 World Map  
+  LNG supplier countries
 
-Download free from: https://powerbi.microsoft.com/desktop
+- 📊 Bar Chart  
+  LNG Imports by Country
 
+- 🍩 Donut Chart  
+  Import share by country
 
-Open the dashboard file:
+- 📋 Table  
+  Top supplier countries and disruption level
 
-Open India_Gas_Supply.pbix in Power BI Desktop
+- Slicer  
+  Year
 
+---
 
-Explore the dashboard:
+## Page 3 — Impact on India
 
-Use the Year slicer to filter by specific year
-Select 2026 to see full crisis impact
-Use **Ctrl + Click** on navigation buttons to switch pages (in edit mode)
-In reading/presentation mode, click normally to navigate
+Shows **how the gas crisis affects Indian states and economic sectors**.
 
+**Visuals Included**
 
+- 🗺️ India Map  
+  State-wise gas demand
 
+- 📊 Column Chart  
+  Gas consumption by sector  
+  (Power, Fertilizer, Industry, Transport, City Gas)
 
-📈 Key Insights
+- 📈 Line Chart  
+  Demand vs Domestic Production
 
-🔴 2026 Crisis Impact: Gas prices spiked over 2x compared to 2025 levels
-📉 Gulf Route Disruption: Qatar, UAE, and Oman imports dropped by ~55% in 2026
-🇺🇸 USA Gains Share: US LNG exports to India increased as alternative supply
-⚡ Power & Fertilizer sectors most affected by supply shortage
-🗺️ Delhi, Punjab, UP reached Critical supply risk levels in 2026
-📊 Supply Gap: Domestic production covered less than 30% of demand in 2026
+- 🎯 Gauge  
+  Supply Gap (BCM)
 
+- Slicers  
+  - Year  
+  - State  
+  - Sector
 
-🎓 Project Context
-This project was developed as part of the Microsoft Elevate AICTE Internship Program (Feb 2026).
+---
 
-Tool: Microsoft Power BI Desktop
-Domain: Energy Analytics
-Type: Capstone Project
-
-
-👩‍💻 Author
-Bhumika Raut
-
-📄 License
-This project is for educational purposes as part of the Microsoft Elevate AICTE Internship Program.
-
-Built with ❤️ using Microsoft Power BI
+# 📁 Repository Structure
